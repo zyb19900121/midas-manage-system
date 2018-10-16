@@ -2,7 +2,7 @@
 
 //按需加载
 const { injectBabelPlugin } = require("react-app-rewired");
-const rewireLess = require('react-app-rewire-less');
+const rewireLess = require("react-app-rewire-less");
 
 //修改路径别名
 const path = require("path");
@@ -19,6 +19,7 @@ module.exports = function override(config, env) {
     config
   );
 
+  // 添加LESS支持
   config = rewireLess.withLoaderOptions({
     // modifyVars: { "@primary-color": "#1DA57A" },
     javascriptEnabled: true
