@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "assets/css/app.less";
 import { Layout } from "antd";
 
+import Aside from 'components/Aside'
+
 const { Header, Footer, Sider, Content } = Layout;
 
 class App extends Component {
@@ -9,7 +11,9 @@ class App extends Component {
     return (
       <div className="app">
         <Layout>
-          <Sider>Sider</Sider>
+          <Sider>
+						<Aside></Aside>
+					</Sider>
           <Layout>
             <Header>Header</Header>
             <Content>Content</Content>
